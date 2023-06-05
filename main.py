@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 months = pd.date_range(start='2023-01-01', periods=12, freq='M')
-# Создаем пример данных
 data = pd.DataFrame({
     'x': range(1, 13),
     'y1': [56, 67, 72, 65, 75, 96, 70, 63, 68, 100, 88, 64],
@@ -10,7 +9,6 @@ data = pd.DataFrame({
 })
 plt.subplots(figsize=(10, 4))
 month_names = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
-# Создаем парные графики
 plt.plot(data['x'], data['y1'], 'go', label='Факт', marker='o', linestyle='-', linewidth=2)
 plt.plot(data['x'], data['y2'], 'ro', marker='o', linestyle='-', linewidth=2, label='План')
 for i in range(len(data)):
